@@ -1,6 +1,8 @@
 # gradle-rabbit-plugin
 a RabbitMQ gradle plugin for integration tests with RabbitMQ
 
+[ ![Download](https://api.bintray.com/packages/amirk/maven/gradle-rabbit-plugin/images/download.svg) ](https://bintray.com/amirk/maven/gradle-rabbit-plugin/_latestVersion)
+
 # Using
 
 ```gradle
