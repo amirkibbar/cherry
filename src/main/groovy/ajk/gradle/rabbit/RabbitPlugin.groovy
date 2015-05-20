@@ -14,5 +14,6 @@ class RabbitPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         project.extensions.create('startRabbit', StartRabbitExtension, project)
+        project.extensions.create('stopRabbit', StopRabbitExtension, project)
     }
 }

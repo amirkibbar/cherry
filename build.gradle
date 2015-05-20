@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "ajk.gradle.rabbit"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 
 String repoName = 'cherry'
 
@@ -73,7 +73,7 @@ task install(dependsOn: 'publishMavenPublicationToMavenLocal') << {
 
 model {
     tasks.generatePomFileForMavenPublication {
-        destination = file("$buildDir/libs/gradle-consul-plugin-${project.version}.pom")
+        destination = file("$buildDir/libs/${project.name}-${project.version}.pom")
     }
 }
 
