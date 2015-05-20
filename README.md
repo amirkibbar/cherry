@@ -62,8 +62,8 @@ The above example shows a task called integrationTests which runs all the tests 
 reports for these tests are placed in the buildDir/reports/integration-tests directory - just to separate them from
 regular tests. But the important part here is in the doFirst and doLast. 
 
-In the doFirst you RabbitMQ is started. All the values in the example above are the default values, so if these values
-work for you they can be ommitted:
+In the doFirst RabbitMQ is started. All the values in the example above are the default values, so if these values
+work for you they can be omitted:
 
 ```gradle
 
