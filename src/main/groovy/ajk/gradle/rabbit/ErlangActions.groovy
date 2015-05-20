@@ -28,14 +28,8 @@ class ErlangActions {
     }
 
     boolean isInstalled() {
-        if (isFamily(FAMILY_WINDOWS)) {
-            File erl = new File("$home/bin/erl.exe")
-
-            return erl.canExecute()
-        } else {
-            // todo verify erl exists using which
-            return false
-        }
+        File erl = isFamily(FAMILY_WINDOWS) ? new File("$home/bin/erl.exe") : new File("/usr/bin/erl")
+        return erl.canExecute()
     }
 
     void install() {
