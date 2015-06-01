@@ -82,12 +82,15 @@ class StartRabbitAction {
         println "${CYAN}* rabbit:$NORMAL starting on port $nodePort and management port $mgmtPort"
         println "${CYAN}* rabbit:$NORMAL RabbitMQ Base directory: $baseDir"
 
-        if (baseDir.exists() && !baseDir.delete()) {
+        ant.delete(quiet: true, dir: baseDir)
+
+        if (baseDir.exists()) {
             println "${CYAN}* rabbit:$RED couldn't delete $baseDir, please make sure RabbitMQ is down and try again$NORMAL"
             throw new IllegalStateException("couldn't delete $baseDir, please make sure RabbitMQ is down and try again")
         }
 
         ant.touch(file: configFile, mkdirs: true)
+
         configFile << """[
  {rabbit, [{tcp_listeners, [$nodePort]}]},
 

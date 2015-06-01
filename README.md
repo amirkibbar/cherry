@@ -13,7 +13,7 @@ a RabbitMQ gradle plugin for integration tests with RabbitMQ
             maven { url "http://dl.bintray.com/amirk/maven" }
         }
         dependencies {
-            classpath("ajk.gradle.rabbit:gradle-rabbit-plugin:0.0.1")
+            classpath("ajk.gradle.rabbit:gradle-rabbit-plugin:0.0.2")
         }
     }
 
