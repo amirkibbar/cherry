@@ -5,6 +5,17 @@ a RabbitMQ gradle plugin for integration tests with RabbitMQ
 
 # Using
 
+Plugin setup for gradle >= 2.1:
+
+```gradle
+
+    plugins {
+        id "ajk.gradle.rabbit" version "0.0.2"
+    }
+```
+
+Plugin setup for gradle < 2.1:
+
 ```gradle
 
     buildscript {
