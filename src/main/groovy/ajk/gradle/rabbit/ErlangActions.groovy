@@ -51,11 +51,11 @@ sudo apt-get install -y --force-yes erlang
             File erlangFile = new File("$toolsDir/erlang-${version}.exe")
             println "${CYAN}* erlang:$NORMAL installing erlang version $version in $erlangHome"
 
-            DownloadAction erlangDownload = new DownloadAction()
+            DownloadAction erlangDownload = new DownloadAction(project)
             erlangDownload.dest(erlangFile)
             erlangDownload.src("http://www.erlang.org/download/otp_win64_${version}.exe")
             erlangDownload.onlyIfNewer(true)
-            erlangDownload.execute(project)
+            erlangDownload.execute()
 
             ant.delete(dir: "$erlangHome", quiet: true)
             erlangHome.mkdirs()

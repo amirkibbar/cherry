@@ -11,7 +11,7 @@ Plugin setup for gradle >= 2.1:
 ```gradle
 
     plugins {
-        id "ajk.gradle.rabbit" version "0.0.2"
+        id "ajk.gradle.rabbit" version "0.0.3"
     }
 ```
 
@@ -25,7 +25,7 @@ Plugin setup for gradle < 2.1:
             maven { url "http://dl.bintray.com/amirk/maven" }
         }
         dependencies {
-            classpath("ajk.gradle.rabbit:gradle-rabbit-plugin:0.0.2")
+            classpath("ajk.gradle.rabbit:gradle-rabbit-plugin:0.0.3")
         }
     }
 

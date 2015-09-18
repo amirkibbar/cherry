@@ -37,11 +37,11 @@ class RabbitActions {
         String rabbitPackage = isFamily(FAMILY_WINDOWS) ? winUrl : linuxUrl
         File rabbitFile = new File("$toolsDir/rabbit-${version}${isFamily(FAMILY_WINDOWS) ? '.zip' : '.tar.gz'}")
 
-        DownloadAction rabbitDownload = new DownloadAction()
+        DownloadAction rabbitDownload = new DownloadAction(project)
         rabbitDownload.dest(rabbitFile)
         rabbitDownload.src(rabbitPackage)
         rabbitDownload.onlyIfNewer(true)
-        rabbitDownload.execute(project)
+        rabbitDownload.execute()
 
         ant.delete(dir: "$home", quiet: true)
         ant.touch(file: marker, mkdirs: true)
